@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/custom.css">
     <title>Restaurant Reviews</title>
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <nav>
             <h1><a href="/">Restaurant Reviews</a></h1>
         </nav>
@@ -19,6 +18,7 @@
 
     <main id="maincontent">
         <section id="map-container">
+            <h2 id="map-heading">Restaurant's Map</h2>
             <div id="map"></div>
         </section>
         <section>
@@ -44,8 +44,8 @@
         Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
 
-    <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
-    <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+    <script src="js/dbhelper.js"></script>
+    <script src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj3EMzv-22bwzNQG02z84wdfgV24lJB7g&libraries=places&callback=initMap"></script>
 
 
