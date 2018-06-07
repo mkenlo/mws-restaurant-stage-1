@@ -149,11 +149,11 @@ createRestaurantHTML = (restaurant) => {
     li.append(name);
 
     const neighborhood = document.createElement('p');
-    neighborhood.innerHTML = restaurant.neighborhood;
+    neighborhood.innerHTML = '<i class="fas fa-location-arrow">&nbsp;</i>'.concat(restaurant.neighborhood);
     li.append(neighborhood);
 
     const address = document.createElement('p');
-    address.innerHTML = restaurant.address;
+    address.innerHTML = '<i class="fas fa-map-marker">&nbsp</i>'.concat(restaurant.address);
     li.append(address);
 
     const more = document.createElement('a');

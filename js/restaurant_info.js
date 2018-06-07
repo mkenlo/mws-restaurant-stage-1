@@ -53,7 +53,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     name.innerHTML = restaurant.name;
 
     const address = document.getElementById('restaurant-address');
-    address.innerHTML = restaurant.address;
+    address.innerHTML = '<i class="fas fa-map-marker">&nbsp</i>'.concat(restaurant.address);;
 
     const image = document.getElementById('restaurant-img');
     image.className = 'restaurant-img';
@@ -119,15 +119,21 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
     const li = document.createElement('li');
     const name = document.createElement('p');
+    name.className = "username";
     name.innerHTML = review.name;
     li.appendChild(name);
 
     const date = document.createElement('p');
+    date.className = "review-date";
     date.innerHTML = review.date;
     li.appendChild(date);
 
     const rating = document.createElement('p');
-    rating.innerHTML = `Rating: ${review.rating}`;
+    var ratingstar ="";
+    for (var i=0;i<review.rating;i++) {
+      ratingstar += '<i class="fas fa-star">&nbsp;</i>';
+    }
+    rating.innerHTML = ratingstar;
     li.appendChild(rating);
 
     const comments = document.createElement('p');
