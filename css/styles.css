@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body, td, th, p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 10pt;
   color: #333;
   line-height: 1.5;
@@ -11,11 +11,10 @@ body, td, th, p {
 body {
   background-color: #fdfdfd;
   margin: 0;
-  /*position: relative;*/
 }
 
 ul, li {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 10pt;
   color: #333;
 }
@@ -35,7 +34,7 @@ a img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0 0 20px;
 }
 
@@ -43,6 +42,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: block;
 }
 
+select{
+  border-radius:3px;
+  color: #555;
+}
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -124,6 +127,10 @@ nav h1 a {
   background-color: #ccc;
 }
 
+#map-heading {
+  display: none;
+}
+
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
@@ -131,6 +138,7 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+  padding-top:10px;
 }
 
 .filter-options h2 {
@@ -173,7 +181,6 @@ nav h1 a {
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
-  font-family: Arial, sans-serif;
   margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
@@ -181,7 +188,7 @@ nav h1 a {
   width: 270px;
   order: 1;
   flex-grow: 1;
-  border-radius:3px;
+  border-radius: 3px;
 }
 
 #restaurants-list .restaurant-img {
@@ -195,7 +202,6 @@ nav h1 a {
 
 #restaurants-list li h1 {
   color: #f18200;
-  font-family: Arial, sans-serif;
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 0;
@@ -220,8 +226,7 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
   box-shadow: 0px 0px 4px 0px #656060;
-  border-radius:5px;
-
+  border-radius: 5px;
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -245,14 +250,13 @@ nav h1 a {
 #info-container {
   margin: auto;
   padding: 0 40px;
-  display:flex;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
 #restaurant-name {
   color: #f18200;
-  font-family: Arial, sans-serif;
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
@@ -264,15 +268,13 @@ nav h1 a {
 
 #restaurant-img-container {
   margin-top: 30px;
-
 }
 
 #restaurant-img {
   width: 90%;
-  margin:auto;
-  display:block;
+  margin: auto;
+  display: block;
   box-shadow: 0px 0px 10px 0px #656060;
-
 }
 
 #restaurant-address {
@@ -293,7 +295,7 @@ nav h1 a {
   width: 100%;
 }
 
-#restaurant-container, #reviews-container, #restaurant-img-container{
+#restaurant-container, #reviews-container, #restaurant-img-container {
   border-bottom: 1px solid #d9d9d9;
   padding: 40px 0px 30px;
 }
@@ -304,7 +306,7 @@ nav h1 a {
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
-  text-align:center;
+  text-align: center;
 }
 
 #reviews-list {
@@ -328,7 +330,7 @@ nav h1 a {
   position: relative;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 #reviews-list li p {
@@ -338,6 +340,20 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+}
+
+.review-author {
+  color: #ff8c00;
+  font-weight: bold;
+  font-size: large;
+}
+
+.review-date {
+  color: #bcb7b3;
+}
+
+.review-comments {
+  color: #555;
 }
 
 /* ====================== Media Queries ====================== */
@@ -353,16 +369,15 @@ nav h1 a {
     width: 27.33%;
     flex-grow: 1;
   }
-
-  #restaurant-img-container{
+  #restaurant-img-container {
     width: 50%;
   }
-  #restaurant-container{
+  #restaurant-container {
     width: 50%;
   }
-  #reviews-container{
+  #reviews-container {
     width: 100%;
-    flex:1 auto;
+    flex: 1 auto;
   }
 }
 
@@ -382,7 +397,6 @@ nav h1 a {
   #restaurant-img {
     width: 80%;
   }
-
 }
 
 @media (max-width:550px) {
@@ -403,23 +417,9 @@ nav h1 a {
   }
 }
 
-/* ======================= Map =================================*/
+/* ============= Font Awesome customize =========================*/
 
-#map-heading {
-  display: none;
-}
-.fas{
-  color:#f58500;
-}
-.fa-star{
-  color:#ff8c00;
-}
-
-.username{
-  color:#ff8c00;
-  font-weight: bold;
-  font-size: large;
-}
-.review-date{
-  color:#bcb7b3;
+.fas {
+  color: #f58500;
+  margin-right: 8px;
 }

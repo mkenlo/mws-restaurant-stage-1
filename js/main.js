@@ -153,7 +153,7 @@ createRestaurantHTML = (restaurant) => {
     li.append(neighborhood);
 
     const address = document.createElement('p');
-    address.innerHTML = '<i class="fas fa-map-marker">&nbsp</i>'.concat(restaurant.address);
+    address.innerHTML = '<i class="fas fa-map-marker-alt">&nbsp;</i>'.concat(restaurant.address);
     li.append(address);
 
     const more = document.createElement('a');
@@ -178,4 +178,20 @@ addMarkersToMap = (restaurants = self.restaurants) => {
         });
         self.markers.push(marker);
     });
+}
+
+
+/**
+* Registring app Service worker
+*/
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
 }

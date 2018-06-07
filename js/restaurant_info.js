@@ -53,7 +53,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     name.innerHTML = restaurant.name;
 
     const address = document.getElementById('restaurant-address');
-    address.innerHTML = '<i class="fas fa-map-marker">&nbsp</i>'.concat(restaurant.address);;
+    address.innerHTML = '<i class="fas fa-map-marker-alt">&nbsp</i>'.concat(restaurant.address);;
 
     const image = document.getElementById('restaurant-img');
     image.className = 'restaurant-img';
@@ -119,7 +119,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
     const li = document.createElement('li');
     const name = document.createElement('p');
-    name.className = "username";
+    name.className = "review-author";
     name.innerHTML = review.name;
     li.appendChild(name);
 
@@ -137,6 +137,7 @@ createReviewHTML = (review) => {
     li.appendChild(rating);
 
     const comments = document.createElement('p');
+    comments.className = "review-comments";
     comments.innerHTML = review.comments;
     li.appendChild(comments);
 
