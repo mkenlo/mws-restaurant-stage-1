@@ -187,8 +187,6 @@ nav h1 a {
   padding: 0 30px 25px;
   text-align: left;
   width: 270px;
-  order: 1;
-  flex-grow: 1;
   border-radius: 3px;
 }
 
